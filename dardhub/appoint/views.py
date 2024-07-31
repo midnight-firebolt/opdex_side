@@ -3,8 +3,8 @@ from django.shortcuts import render
 # Create your views here.
 from django.shortcuts import render, redirect
 from .forms import InputForm , RegForm , EmerForm
-from django.http import HttpResponse
-
+from docui.models import MedicineSchedule
+from django.http import HttpResponse 
 def HomePage(request):
     if request.method == 'POST':
         form = InputForm(request.POST)

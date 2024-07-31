@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enter Patient ID</title>
+</head>
+<body>
+
+    <form method="post">
+        {% csrf_token %}
+        <label for="patient_id">Patient ID:</label>
+        <input type="number" id="patient_id" name="patient_id">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

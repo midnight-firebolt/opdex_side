@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirect Page</title>
+  <table>
+    <thead>
+      <tr>
+        <th>Appointment</th>
+        <th>Medicine Name</th>
+        <th>Morning</th>
+        <th>Afternoon</th>
+        <th>Evening</th>
+        <th>Night</th>
+        <th>Dose</th>
+        <th>Duration</th>
+        <th>Before Meal</th>
+        <th>After Meal</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for schedule in medicine_schedules %}
+        {% if schedule.id == pat_id %}
+          <tr>
+            <td>{{ schedule.appointment }}</td>
+            <td>{{ schedule.medicine_name }}</td>
+            <td>{% if schedule.morning %}Yes{% else %}No{% endif %}</td>
+            <td>{% if schedule.afternoon %}Yes{% else %}No{% endif %}</td>
+            <td>{% if schedule.evening %}Yes{% else %}No{% endif %}</td>
+            <td>{% if schedule.night %}Yes{% else %}No{% endif %}</td>
+            <td>{{ schedule.dose }}</td>
+            <td>{{ schedule.duration }}</td>
+            <td>{% if schedule.bef %}Yes{% else %}No{% endif %}</td>
+            <td>{% if schedule.aft %}Yes{% else %}No{% endif %}</td>
+          </tr>
+        {% endif %}
+      {% endfor %}
+    </tbody>
+  </table>
+</html>

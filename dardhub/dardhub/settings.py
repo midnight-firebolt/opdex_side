@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'docui',
     'appoint',
     'homepage',
+    'viewMeds',
 ]
 
 MIDDLEWARE = [
