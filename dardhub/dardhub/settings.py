@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'appoint',
     'homepage',
     'viewMeds',
+    'members',
 ]
 
 MIDDLEWARE = [

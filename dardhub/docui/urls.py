@@ -1,5 +1,9 @@
 from django.urls import path
 from . import views
+
+app_name = 'docui' 
+
+
 urlpatterns = [
     path("",views.appointments,name = "app page"),
     path("<int:pat_id>/",views.DocPage, name = "avtual fill"),
