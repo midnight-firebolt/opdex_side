@@ -17,7 +17,7 @@ def login_user(request) :
             return redirect('docui:app page')
         
         else:
-            return render(request, 'loginpage.html', {})
+            return redirect('/')
     else :
         return render(request, 'loginpage.html', {})
 # Create your views here.
